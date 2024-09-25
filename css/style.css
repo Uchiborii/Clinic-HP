@@ -1,0 +1,628 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  color: #474645;
+  font-optical-sizing: auto;
+}
+
+body {
+	/* font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal; */
+
+	font-family: 游ゴシック体, 游ゴシック, YuGothic, メイリオ, Meiryo, 
+	"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "MS Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+}
+
+pre {
+  font-family: sans-serif;
+}
+
+
+
+html {
+  font-size: 20px;
+}
+
+.header-top {
+	padding-top: 75px;
+}
+
+.small-font {
+	font-size: 70%;
+}
+
+.h2-font {
+	font-size: 120%;
+}
+
+h2 {
+	font-size: 120%;
+}
+h3 {
+	font-size: 70%;
+}
+
+p {
+	font-size: 80%;
+	text-align: left;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+a {
+  color: #474645;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+a:hover {
+  color: #5B5656;
+}
+
+.container-detail p,
+h4 {
+  color: #5B5656;
+}
+
+.breadcrumb {
+  display: flex;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.bread-title {
+  display: inline;
+  position: relative;
+  font-size: 50%;
+}
+
+.breadcrumb a {
+  font-size: 100%;
+}
+
+.bread-title:not(:last-of-type)::after {
+  content: "›";
+  margin: 5px;
+  color: #474645;
+}
+
+.bread-title a {
+  color: #474645;
+}
+
+.btn {
+  text-align: center;
+  padding: 20px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  color: #5B5656;
+  text-align: center;
+}
+
+.arrow:hover {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  border-radius: 50%;
+  color: #5B5656;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+}
+
+.header-top {
+  padding-top: 80px;
+}
+
+.hospital-logo {
+  height: 65px;
+  padding-left: 10px;
+}
+
+.nav {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  padding-top: 60px;
+  background-color: #fff;
+  transition: all 0.6s;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.hamburger {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.nav-item {
+  text-align: center;
+}
+.nav-item a {
+  display: block;
+  padding: 12px 5px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+}
+
+.hamburger-border {
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.6s;
+}
+.hamburger-border-top {
+  top: 14px;
+}
+.hamburger-border-center {
+  top: 20px;
+}
+.hamburger-border-bottom {
+  top: 26px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+.nav-open .nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: 0.8;
+  visibility: visible;
+}
+.nav-open .hamburger-border-top {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger-border-center {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger-border-bottom {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.header-position {
+  display: none;
+}
+
+
+.overlay-image {
+  margin-bottom: 5px;
+}
+
+
+
+
+.grid {
+  display: none;
+}
+
+.grid a {
+  color: white;
+  line-height: 1.8;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+p.copyright {
+  color: #5B5656;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.title-padding {
+  padding-top: 50px;
+}
+
+th,
+td {
+  border-top: 1px solid rgb(160, 160, 160);
+  border-bottom: 1px solid rgb(160, 160, 160);
+  padding: 10px 0;
+  background-color: transparent; /* 背景を透過 */
+  font-size: 65%;
+}
+
+th[scope="col"] {
+  border-top: none;
+  background-color: #ffffff;
+  color: #474645;
+}
+
+th[scope="row"] {
+  background-color: #ffffff;
+  width: 34%;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: transparent;
+}
+
+table {
+  width: auto;
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  text-align: right;
+  font-size: 65%;
+}
+
+img.doctor-img {
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .container {
+    max-width: 680px;
+  }
+
+  .h3-font {
+    font-size: 85%;
+  }
+
+  .p-font {
+    font-size: 75%;
+    padding-top: 5px;
+  }
+
+  .h5-font {
+    font-size: 60%;
+  }
+
+  .a-font {
+    font-size: 110%;
+  }
+
+  h1 {
+    font-size: 110%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  h3 {
+    font-size: 85%;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 80%;
+    font-weight: bold;
+    border-bottom: 1px dotted #ffffff;
+    padding-top: 30px;
+  }
+  p {
+    font-size: 75%;
+    padding-top: 5px;
+  }
+
+  .regular-font {
+    font-size: 110%;
+  }
+
+  .bread-title {
+    font-size: 65%;
+  }
+
+	
+  .title-padding {
+    padding: 20px;
+
+		justify-content: center;
+		border: 1px solid #5B5656;
+  }
+
+	img.doctor-img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		padding-bottom: 50px;
+	}
+	
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    height: 90px;
+  }
+
+  .header-top {
+    padding-top: 90px;
+  }
+
+  .small-font {
+    font-size: 70%;
+  }
+
+	.h2-font {
+		font-size: 100%;
+	}
+
+  h2 {
+    font-size: 150%;
+  }
+  h3 {
+    font-size: 100%;
+  }
+
+  p {
+    font-size: 85%;
+  }
+
+
+
+  .breadcrumb {
+    padding: 30px 0;
+  }
+
+  .bread-title {
+    font-size: 75%;
+  }
+
+  .bread-title:not(:last-of-type)::after {
+    margin: 13px;
+  }
+
+  .blue-line h3 {
+    font-weight: bold;
+  }
+
+  .more-button {
+    display: flex;
+    padding: 50px;
+  }
+
+  .total-more-btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hospital-logo {
+    height: 80px;
+    padding-left: 20px;
+  }
+
+  .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    background-color: transparent;
+    transition: none;
+    z-index: auto;
+    overflow: visible;
+    display: flex;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0 20px 0 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    margin: 0 10px;
+    padding-top: 17px;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: #474645;
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
+  .nav-item a {
+    border-bottom: none;
+    text-decoration: none;
+    padding: 10px 15px;
+font-size: 110%;
+font-weight: bold;
+  }
+
+  .nav-item a:hover {
+    color: #c5c1c1;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger-border {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .header-position {
+		display: block;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+	.phone{
+		font-size: 180%;
+}
+
+
+.grid {
+	display: flex;
+	justify-content: center; /* 水平方向の中央寄せ */
+	align-items: center;     /* 垂直方向の中央寄せ */
+}
+
+.header-position {
+	margin-left: 30px; /* 必要に応じて間隔を調整 */
+}
+
+
+  hr {
+    height: 1px;
+  }
+
+  .arrow {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .arrow:hover {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 40px;
+  }
+
+
+  .container {
+    max-width: 1600px;
+  }
+
+	img.doctor-img {
+		max-width: 100%;
+		height: auto;
+		padding-bottom: 50px;
+	}
+
+  .black-bg {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+	
+  .title-padding {
+    padding: 10px;
+		margin: 0 20%; 
+		display: grid;
+		justify-content: center;
+		border: 1px solid #5B5656;
+  }
+
+  th,
+  td {
+    padding: 30px 25px;
+    font-size: 125%;
+  }
+
+  th[scope="row"] {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  caption {
+    font-size: 125%;
+  }
+
+	
+img.doctor-img {
+	max-width: 100%;
+	width: 110%;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+img.char-img {
+	max-width: 100%;
+	width: 70%;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+}

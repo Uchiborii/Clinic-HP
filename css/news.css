@@ -1,0 +1,108 @@
+a {
+  color: #474645;
+}
+
+.page-item {
+  padding-top: 15px;
+}
+
+.list-item {
+  justify-content: space-between;
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  align-items: center;
+}
+
+.list-item p {
+  font-size: 65%;
+}
+
+.button-img .button-icon {
+  max-width: none;
+  height: 15px;
+	padding-left: 10px;
+}
+
+.mt-4 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.news-date {
+  padding-right: 10px;
+}
+
+.center-item {
+  margin-right: auto;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+
+	.list-item p{
+		font-size: 116%;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+  .page-item {
+    padding-top: 40px;
+  }
+
+  .list-item {
+		display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .button-img .button-icon {
+    display: none;
+  }
+
+  .news-date {
+    padding-right: 20px;
+		font-size: 70%;
+  }
+
+  .news-flex {
+    display: flex;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .news-title {
+    padding-bottom: 10px;
+  }
+	
+	.list-item {
+
+		font-size: 100%;
+		text-align: left;
+	}
+
+
+
+	.blogs-container {
+		display: flex;  /* 子要素を横並びにする */
+		gap: 90px;  /* アイテム間のスペース */
+		justify-content: space-between;  /* 均等に配置 */
+		flex-wrap: wrap;  /* 画面幅が狭い場合に折り返す */
+	}
+	
+	.blog-item {
+		flex: 1 1 calc(30% - 20px);  /* 3つの記事を均等に表示 */
+
+	}
+	
+	.blog-item img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	
+}
