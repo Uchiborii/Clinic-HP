@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+	
 }
 
 .detail {
@@ -57,7 +58,7 @@ body {
 }
 
 .top-photo {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   margin: 0;
@@ -115,6 +116,12 @@ body {
   padding-top: 30px;
 }
 
+.message-title,
+.message-right {
+font-size: 100%;
+}
+
+
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   .hospital-photo {
     display: block;
@@ -132,14 +139,8 @@ body {
 
   .container-detail {
     display: flex;
-		background-color: #f3f2f2;
   }
-
-  .business-hour {
-    margin-left: 200px;
-  }
-
-
+	
 
   .logo-top {
     width: 100%;

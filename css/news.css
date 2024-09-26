@@ -8,7 +8,6 @@ a {
 
 .list-item {
   justify-content: space-between;
-  display: flex;
   padding: 15px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   align-items: center;
@@ -36,28 +35,55 @@ a {
 
 .news-date {
   padding-right: 10px;
+	font-size: 60%;
 }
 
 .center-item {
+	font-size: 80%;
   margin-right: auto;
 	font-weight: bold;
 }
 
+	.blogs-container {
+		display: block;
+	}
+
+	.button-flex{
+		display: flex;
+	}
+
 @media screen and (min-width: 700px) and (max-width: 1200px) {
+	.blogs-container {
+		display: block;
+	}
 
 	.list-item p{
 		font-size: 116%;
 	}
+
+	.news-date {
+		font-size: 60%;
+	}
+	
+	.center-item {
+		margin-right: auto;
+		font-weight: bold;
+	}
+
+	.button-img .button-icon {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   .page-item {
     padding-top: 40px;
   }
 
   .list-item {
-		display: block;
+		display: flex; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+		align-items: center;
   }
 
   .button-img .button-icon {
@@ -80,7 +106,6 @@ a {
   }
 	
 	.list-item {
-
 		font-size: 100%;
 		text-align: left;
 	}
@@ -89,14 +114,13 @@ a {
 
 	.blogs-container {
 		display: flex;  /* 子要素を横並びにする */
-		gap: 90px;  /* アイテム間のスペース */
+		gap: 50px;  /* アイテム間のスペース */
 		justify-content: space-between;  /* 均等に配置 */
-		flex-wrap: wrap;  /* 画面幅が狭い場合に折り返す */
+		margin: 0 20px;
 	}
 	
 	.blog-item {
 		flex: 1 1 calc(30% - 20px);  /* 3つの記事を均等に表示 */
-
 	}
 	
 	.blog-item img {

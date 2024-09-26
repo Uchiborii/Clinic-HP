@@ -73,29 +73,37 @@ function display(data) {
     const newTag = isNew ? `<div class="bg-white text-danger rounded-pill m-3 h6">new!</div>` : "";
 
     const content = `
-    <div class="blog-item">
-      <a class="list-item" href="detail.html?id=${blog._id}">
-        <div class="news-date">
-          ${formattedDate}
-        </div>
-        <div class="center-item">
-          ${blog.title}
-          ${newTag}			
-        </div>
-        <div class="button-img">					
-          <img src="img/button.webp" class="button-icon" />						
-        </div>
-      </a>
-      <div>
-        ${blog.content}
-      </div>
-    </div>`;
+<div class="blog-item">
+	<details open>
+		<summary>
+			<div class="news-date">
+					${formattedDate}
+			</div>
+			<div class="button-flex">
+				<div class="center-item">
+						${blog.title}
+						${newTag}			
+				</div>
+				<div class="button-img">					
+					<img src="img/button.webp" class="button-icon" />						
+				</div>
+			</div>
+		</summary>
+
+		<div class="accordion-content">
+			${blog.content}
+		</div>
+	</details>
+</div>
+`;
     
-    html += content;  // 各ブログ記事を追加
+    html += content; 
   });
-  html += `</div>`;  // 親コンテナを閉じる
+  html += `</div>`;
   return html;
 }
+
+
 
 async function getPostData(_limit) {
   const skip = (page - 1) * Number(_limit);

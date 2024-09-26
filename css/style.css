@@ -20,7 +20,6 @@ pre {
 }
 
 
-
 html {
   font-size: 20px;
 }
@@ -49,7 +48,6 @@ p {
 	text-align: left;
 }
 
-
 .container {
   width: 100%;
   max-width: 300px;
@@ -77,6 +75,16 @@ a:hover {
 .container-detail p,
 h4 {
   color: #5B5656;
+}
+
+
+.p-margin {
+margin: 5px 20px 20px 20px;
+}
+
+.sub-padding{
+	margin: 10px 20px 0 20px;
+
 }
 
 .breadcrumb {
@@ -112,15 +120,6 @@ h4 {
   padding: 20px;
 }
 
-.arrow {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50%;
-  color: #5B5656;
-  text-align: center;
-}
 
 .arrow:hover {
   display: inline-block;
@@ -151,8 +150,8 @@ header {
 }
 
 .hospital-logo {
-  height: 65px;
-  padding-left: 10px;
+  height: 40px;   
+	padding: 15px 0 0 8px;
 }
 
 .nav {
@@ -172,7 +171,7 @@ header {
   position: absolute;
   right: 15px;
   top: 15px;
-  width: 40px;
+  width: 50px;
   height: 40px;
   cursor: pointer;
   z-index: 300;
@@ -187,6 +186,7 @@ header {
   border-bottom: 1px solid #eee;
   text-decoration: none;
   color: #333;
+	font-size: 85%;
 }
 
 .hamburger-border {
@@ -240,25 +240,10 @@ header {
   top: 20px;
 }
 
-.header-position {
-  display: none;
-}
-
-
-.overlay-image {
-  margin-bottom: 5px;
-}
-
-
 
 
 .grid {
-  display: none;
-}
-
-.grid a {
-  color: white;
-  line-height: 1.8;
+	text-align: center;
 }
 
 hr {
@@ -278,7 +263,10 @@ p.copyright {
 }
 
 .title-padding {
-  padding-top: 50px;
+	padding: 0;
+	padding: 10px;
+	justify-content: center;
+	border: 1px solid #5B5656;
 }
 
 th,
@@ -327,9 +315,75 @@ caption {
 img.doctor-img {
 	max-width: 100%;
 	height: auto;
-	padding-bottom: 50px;
+	padding-top: 20px;
 }
 
+img.char-img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+.hospital-photo{
+  display:flex;
+  flex-direction: column;
+}
+
+.message{
+    order:2;
+  }
+
+
+.change-img{
+    order: 1;
+  }
+
+	.phone{
+		font-size: 150%;
+}
+
+.footer-day {
+	font-size: 70%;
+}
+
+.container-detail{
+  display:flex;
+  flex-direction: column;
+}
+
+.business-hour{
+	background-color: #f3f2f2;
+	margin-bottom: 0;
+    order:2;
+  }
+
+
+.access{
+    order: 1;
+  }
+
+	details {
+		margin-bottom: 10px;
+	}
+	
+	summary {
+		display: block;
+		font-weight: bold;
+		padding: 10px 15px;
+		cursor: pointer;
+		border-bottom: 1px solid #cecece;
+		color: #fff;
+		position: relative;
+	}
+	
+	.accordion-content {
+		padding: 10px 15px;
+	
+	}
+	
+	details[open] summary {
+		color: #fff;
+	}
 
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -385,7 +439,6 @@ img.doctor-img {
 
 	
   .title-padding {
-    padding: 20px;
 
 		justify-content: center;
 		border: 1px solid #5B5656;
@@ -397,6 +450,8 @@ img.doctor-img {
 		height: auto;
 		padding-bottom: 50px;
 	}
+
+
 	
 }
 
@@ -428,7 +483,9 @@ img.doctor-img {
     font-size: 85%;
   }
 
-
+	.sub-padding{
+		padding-top: 20px;
+		}
 
   .breadcrumb {
     padding: 30px 0;
@@ -458,8 +515,8 @@ img.doctor-img {
   }
 
   .hospital-logo {
-    height: 80px;
-    padding-left: 20px;
+    height: 60px;
+		padding: 15px 0 0 20px;
   }
 
   .nav {
@@ -522,7 +579,7 @@ font-weight: bold;
   .header-position {
 		display: block;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 30px;
   }
 
 	.phone{
@@ -530,16 +587,10 @@ font-weight: bold;
 }
 
 
-.grid {
-	display: flex;
-	justify-content: center; /* 水平方向の中央寄せ */
-	align-items: center;     /* 垂直方向の中央寄せ */
-}
-
-.header-position {
-	margin-left: 30px; /* 必要に応じて間隔を調整 */
-}
-
+  .grid {
+    display: flex;
+    padding: 0px 0px 0px 550px;
+  }
 
   hr {
     height: 1px;
@@ -559,7 +610,7 @@ font-weight: bold;
 
   .copyright {
     text-align: center;
-    padding: 40px;
+    padding: 10px;
   }
 
 
@@ -613,16 +664,74 @@ font-weight: bold;
 	
 img.doctor-img {
 	max-width: 100%;
-	width: 110%;
+	width: 1500px;
 	height: auto;
 	padding-bottom: 50px;
 }
 
 img.char-img {
 	max-width: 100%;
-	width: 70%;
+	width: 1000px;
 	height: auto;
 	padding-bottom: 50px;
 }
+
+.hospital-photo,
+.container-detail {
+	flex-direction: row;
+}
+
+.message,
+.business-hour {
+	margin-bottom: 9px;
+	order: 0; 
+}
+
+.change-img,
+.access {
+	order: 0;
+}
+
+.p-margin {
+	margin: 20px 0 20px 100px;
+	}
+	
+	.sub-padding{
+		margin: 38px 0 0 95px;
+	
+	}
+
+
+
+	/* アコーディオン（お知らせ部分に反映させたい） */
+	
+	/* .accordion-container {
+		max-width: 600px;
+		margin: 0 auto;
+	} */
+	
+	details {
+		border: none;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	
+	summary {
+		font-weight: normal;
+		padding: 0;
+		text-align: left;
+		cursor: pointer;
+		background-color: #ffffff;
+	}
+	
+	.accordion-content {
+		border-top: 0.5px solid #dfdede;
+		padding: 10px 0;
+	}
+	
+	details[open] summary {
+		background-color: initial;
+	} 
+	
 
 }

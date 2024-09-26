@@ -110,21 +110,22 @@
           </div>
 
 					<div class="hospital-photo">
-					<div class="message">
-						<h2 class="message-right">
-							院長挨拶
-						</h2>
-						<p>
-							世の中に最適な医療を提供したいという想いから、令和5年1月にメディネットクリニックを開業いたしました。
-							これまでの経験を活かし、地域に根ざし、皆様に信頼されるクリニックを目指して努力を重ねてまいります。
-						</p>
-					</div>
-					<img src="img/doctor.webp" alt="doctor" class="doctor-img" />
-				</div>
-					
+						<div class="message">
+							<h2 class="message-right">
+								院長挨拶
+							</h2>
+							<p>
+								世の中に最適な医療を提供したいという想いから、令和5年1月にメディネットクリニックを開業いたしました。
+								これまでの経験を活かし、地域に根ざし、皆様に信頼されるクリニックを目指して努力を重ねてまいります。
+							</p>
+						</div>
+
+						<div class="change-img">
+							<img src="img/doctor.webp" alt="doctor" class="doctor-img" />
+						</div>
+					</div>					
         </div>
       </section>
-
 
 			<section>
         <div class="container">
@@ -138,27 +139,82 @@
         <div class="container">
           <div class="container-detail">
             <div class="business-hour">
-              <h4 class="border">住所</h4>
-              <p>〒380-0838</p>
-							<p>長野県長野市南長野県町484-1 センターボア 8F</p>
-              <h4 class="border">駐車場</h4>
-              <p>医院前に当院専用駐車場あり</p>
-              <h4 class="border">備考</h4>
-              <p>長野駅から徒歩で役20分</p>
-              <p>長野駅から車で約５分</p>
+              <h4 class="sub-padding">住所</h4>
+							<hr/>
+              <p class="p-margin">〒380-0838<br>
+								長野県長野市南長野県町484-1 センターボア 8F
+							</p>
+
+              <h4 class="sub-padding">駐車場</h4>
+							<hr/>
+              <p class="p-margin">医院前に当院専用駐車場あり</p>
+              <h4 class="sub-padding">備考</h4>
+							<hr/>
+              <p class="p-margin">長野駅から徒歩で役20分<br>
+								長野駅から車で約５分</p>
             </div>
             <div class="access">
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819417.1877935673!2d136.96432113647458!3d36.654097781310156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d86e663ec7b6f%3A0x664cb60cddcb82c3!2z77yI5qCq77yJ44Oh44OH44Kj44ON44OD44OIIOmVt-mHjuaUr-ekvg!5e0!3m2!1sja!2sjp!4v1722568453605!5m2!1sja!2sjp" 
-								width="460" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gmap-iframe"></iframe>
+								width="460" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gmap-iframe"></iframe>
             </div>
           </div>
         </div>
       </section>
+
+
+
+			
+		<!-- アコーディオン（お知らせ部分に反映させたい）  -->
+			<div class="accordion-container">
+				<details open>
+					<summary >Accordion 1</summary>
+					<div class="accordion-content">
+						<p>アコーディオン　１</p>
+					</div>
+				</details>
+				<details>
+					<summary>Accordion 2</summary>
+					<div class="accordion-content">
+						<p>アコーディオン　２</p>
+					</div>
+				</details>
+				<details>
+					<summary>Accordion 3</summary>
+					<div class="accordion-content">
+						<p>アコーディオン　３</p>
+					</div>
+				</details>
+			</div>
+			
+
+
+
 
       <div id="footer"></div>
     </main>
   </body>
 	<script>
 		startCatchUrl()
+
+		function toggleAccordion() {
+    const detailsElements = document.querySelectorAll('details');
+
+    if (window.innerWidth >= 1200) {
+        detailsElements.forEach(detail => {
+            detail.setAttribute('open', 'open');
+        });
+    } else {
+        detailsElements.forEach(detail => {
+            detail.removeAttribute('open');
+        });
+    }
+}
+
+// 初回の実行
+toggleAccordion();
+
+// ウィンドウサイズが変更された時に実行
+window.addEventListener('resize', toggleAccordion);
+
 	</script>
 </html>
