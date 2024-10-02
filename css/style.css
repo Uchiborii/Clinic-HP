@@ -7,18 +7,92 @@
 }
 
 body {
-	/* font-family: "Zen Maru Gothic", serif;
+	font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
-  font-style: normal; */
-
-	font-family: 游ゴシック体, 游ゴシック, YuGothic, メイリオ, Meiryo, 
-	"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "MS Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+  font-style: normal; 
 }
 
-pre {
-  font-family: sans-serif;
+.detail {
+  color: #5B5656;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 30px; */
 }
 
+.container-detail {
+  width: 100%;
+  max-width: 100%;
+	height: auto;
+}
+
+.business-hour,
+.access {
+  flex: 1;
+}
+
+.gmap-iframe {
+  aspect-ratio: 10 / 7;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+
+}
+
+.logo-top {
+  width: 100%;
+  position: relative;
+  background-color: #D9D9D9;
+  display: inline-block;
+  height: auto;
+  position: relative;
+}
+
+.logo-top h1 {
+  display: none;
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 100%;
+  width: 100%;
+  padding-left: 20%;
+}
+
+.top-photo {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  opacity: 0.6;
+  display: block;
+}
+
+.news h2,
+.time h2 {
+  text-align: center;
+}
+
+.greeting {
+  text-align: center;
+}
+
+.hospital-photo {
+  text-align: center;
+}
+
+.news-top {
+  display: none;
+}
+
+.message-title,
+.message-right {
+font-size: 100%;
+padding: 10px;
+}
 
 html {
   font-size: 20px;
@@ -28,16 +102,9 @@ html {
 	padding-top: 75px;
 }
 
-.small-font {
-	font-size: 70%;
-}
-
-.h2-font {
-	font-size: 120%;
-}
-
 h2 {
 	font-size: 120%;
+	padding: 50px 0 10px 0;
 }
 h3 {
 	font-size: 70%;
@@ -72,11 +139,6 @@ a:hover {
   color: #5B5656;
 }
 
-.container-detail p,
-h4 {
-  color: #5B5656;
-}
-
 
 .p-margin {
 margin: 5px 20px 20px 20px;
@@ -84,53 +146,8 @@ margin: 5px 20px 20px 20px;
 
 .sub-padding{
 	margin: 10px 20px 0 20px;
-
 }
 
-.breadcrumb {
-  display: flex;
-  padding: 10px 0;
-  margin: 0;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-.bread-title {
-  display: inline;
-  position: relative;
-  font-size: 50%;
-}
-
-.breadcrumb a {
-  font-size: 100%;
-}
-
-.bread-title:not(:last-of-type)::after {
-  content: "›";
-  margin: 5px;
-  color: #474645;
-}
-
-.bread-title a {
-  color: #474645;
-}
-
-.btn {
-  text-align: center;
-  padding: 20px;
-}
-
-
-.arrow:hover {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50%;
-  border-radius: 50%;
-  color: #5B5656;
-  text-align: center;
-}
 
 header {
   display: flex;
@@ -151,7 +168,7 @@ header {
 
 .hospital-logo {
   height: 40px;   
-	padding: 15px 0 0 8px;
+	padding: 15px 0 0 0;
 }
 
 .nav {
@@ -240,16 +257,12 @@ header {
   top: 20px;
 }
 
-
-
 .grid {
 	text-align: center;
 }
 
 hr {
-  margin: 0;
-  border: 0;
-  border-top: 1px solid #e5e7eb;
+	width: 100%;
 }
 
 p.copyright {
@@ -263,10 +276,8 @@ p.copyright {
 }
 
 .title-padding {
-	padding: 0;
 	padding: 10px;
 	justify-content: center;
-	border: 1px solid #5B5656;
 }
 
 th,
@@ -274,7 +285,7 @@ td {
   border-top: 1px solid rgb(160, 160, 160);
   border-bottom: 1px solid rgb(160, 160, 160);
   padding: 10px 0;
-  background-color: transparent; /* 背景を透過 */
+  background-color: transparent; 
   font-size: 65%;
 }
 
@@ -314,6 +325,7 @@ caption {
 
 img.doctor-img {
 	max-width: 100%;
+	width: 100%;
 	height: auto;
 	padding-top: 20px;
 }
@@ -324,22 +336,23 @@ img.char-img {
 	height: auto;
 }
 
-.hospital-photo{
+.hospital-photo {
   display:flex;
   flex-direction: column;
 }
 
-.message{
+.message {
     order:2;
   }
 
 
-.change-img{
+.change-img {
     order: 1;
   }
 
-	.phone{
-		font-size: 150%;
+.phone {
+	font-size: 150%;
+	letter-spacing: 7px;
 }
 
 .footer-day {
@@ -351,39 +364,51 @@ img.char-img {
   flex-direction: column;
 }
 
-.business-hour{
+.business-hour {
 	background-color: #f3f2f2;
 	margin-bottom: 0;
-    order:2;
+	order:2;
+	margin-top: -6px;
   }
 
-
-.access{
+.access {
     order: 1;
   }
 
-	details {
-		margin-bottom: 10px;
-	}
+details {
+	margin-bottom: 10px;
+}
 	
-	summary {
-		display: block;
-		font-weight: bold;
-		padding: 10px 15px;
-		cursor: pointer;
-		border-bottom: 1px solid #cecece;
-		color: #fff;
-		position: relative;
-	}
-	
-	.accordion-content {
-		padding: 10px 15px;
-	
-	}
-	
-	details[open] summary {
-		color: #fff;
-	}
+summary {
+	display: block;
+	font-weight: bold;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-bottom: 1px solid #cecece;
+	color: #fff;
+	position: relative;
+}
+
+.accordion-content {
+	padding: 10px 15px;
+}
+
+details[open] summary {
+	color: #fff;
+}
+
+.header-position {
+	display: none;
+}
+
+.title-padding {
+	padding: 10px;
+	border: 1px solid #5B5656;
+}
+
+[id] {
+	scroll-margin-top: 80px; /* ヘッダーの高さに合わせて調整 */
+}
 
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -391,28 +416,11 @@ img.char-img {
     max-width: 680px;
   }
 
-  .h3-font {
-    font-size: 85%;
-  }
-
-  .p-font {
-    font-size: 75%;
-    padding-top: 5px;
-  }
-
-  .h5-font {
-    font-size: 60%;
-  }
-
-  .a-font {
-    font-size: 110%;
-  }
-
   h1 {
     font-size: 110%;
   }
   h2 {
-    font-size: 100%;
+    font-size: 120%;
   }
   h3 {
     font-size: 85%;
@@ -422,37 +430,32 @@ img.char-img {
     font-size: 80%;
     font-weight: bold;
     border-bottom: 1px dotted #ffffff;
-    padding-top: 30px;
+    padding-top: 20px;
   }
   p {
     font-size: 75%;
     padding-top: 5px;
   }
+	.sub-padding{
+		margin: 0 0 0 160px;
+		font-size: 100%;
+	}
+	.p-margin {
+		margin: 10px 0 30px 160px;
+		}
 
-  .regular-font {
-    font-size: 110%;
-  }
-
-  .bread-title {
-    font-size: 65%;
-  }
-
-	
-  .title-padding {
-
-		justify-content: center;
-		border: 1px solid #5B5656;
-  }
-
-	img.doctor-img {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		padding-bottom: 50px;
+	th,
+	td {
+		font-size: 90%;
 	}
 
+	caption {
+		font-size: 90%;
+	}
 
-	
+	hr {
+		width: 300px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -464,16 +467,9 @@ img.char-img {
     padding-top: 90px;
   }
 
-  .small-font {
-    font-size: 70%;
-  }
-
-	.h2-font {
-		font-size: 100%;
-	}
-
   h2 {
     font-size: 150%;
+		padding: 60px 0 40px 0;
   }
   h3 {
     font-size: 100%;
@@ -483,36 +479,9 @@ img.char-img {
     font-size: 85%;
   }
 
-	.sub-padding{
-		padding-top: 20px;
+	.sub-padding {
+		padding-top: 0;
 		}
-
-  .breadcrumb {
-    padding: 30px 0;
-  }
-
-  .bread-title {
-    font-size: 75%;
-  }
-
-  .bread-title:not(:last-of-type)::after {
-    margin: 13px;
-  }
-
-  .blue-line h3 {
-    font-weight: bold;
-  }
-
-  .more-button {
-    display: flex;
-    padding: 50px;
-  }
-
-  .total-more-btn {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
 
   .hospital-logo {
     height: 60px;
@@ -556,8 +525,7 @@ img.char-img {
     border-bottom: none;
     text-decoration: none;
     padding: 10px 15px;
-font-size: 110%;
-font-weight: bold;
+		font-size: 110%;
   }
 
   .nav-item a:hover {
@@ -582,30 +550,22 @@ font-weight: bold;
     padding: 0 30px;
   }
 
-	.phone{
+	.footer-position {
+    padding: 0 30px;
+  }
+
+	.phone {
 		font-size: 180%;
 }
 
-
   .grid {
     display: flex;
-    padding: 0px 0px 0px 550px;
+		justify-content: center;
+		align-items: center; 
   }
 
   hr {
-    height: 1px;
-  }
-
-  .arrow {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-  }
-
-  .arrow:hover {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+		width: 500px;
   }
 
   .copyright {
@@ -613,31 +573,18 @@ font-weight: bold;
     padding: 10px;
   }
 
-
   .container {
     max-width: 1600px;
   }
 
-	img.doctor-img {
-		max-width: 100%;
-		height: auto;
-		padding-bottom: 50px;
-	}
-
   .black-bg {
     display: none;
   }
-
-  .hide-mobile {
-    display: none;
-  }
-
 	
   .title-padding {
     padding: 10px;
 		margin: 0 20%; 
 		display: grid;
-		justify-content: center;
 		border: 1px solid #5B5656;
   }
 
@@ -661,59 +608,54 @@ font-weight: bold;
     font-size: 125%;
   }
 
-	
-img.doctor-img {
-	max-width: 100%;
-	width: 1500px;
-	height: auto;
-	padding-bottom: 50px;
-}
-
-img.char-img {
-	max-width: 100%;
-	width: 1000px;
-	height: auto;
-	padding-bottom: 50px;
-}
-
-.hospital-photo,
-.container-detail {
-	flex-direction: row;
-}
-
-.message,
-.business-hour {
-	margin-bottom: 9px;
-	order: 0; 
-}
-
-.change-img,
-.access {
-	order: 0;
-}
-
-.p-margin {
-	margin: 20px 0 20px 100px;
+		
+	img.doctor-img {
+		max-width: 100%;
+		width: 3500px;
+		height: auto;
+		padding-bottom: 50px;
+		padding-top: 0;
 	}
-	
+
+	img.char-img {
+		max-width: 100%;
+		width: 3650px;
+		height: auto;
+		padding-bottom: 50px;
+	}
+
+	.hospital-photo,
+	.container-detail {
+		flex-direction: row;
+	}
+
+	.message,
+	.business-hour {
+		margin: 0;
+		order: 0; 
+	}
+
+	.change-img,
+	.access {
+		order: 0;
+	}
+
+	.p-margin {
+		margin: 10px 0 35px 100px;
+		}
+		
 	.sub-padding{
-		margin: 38px 0 0 95px;
-	
+		margin: 40px 0 10px 95px;
 	}
 
 
-
-	/* アコーディオン（お知らせ部分に反映させたい） */
-	
-	/* .accordion-container {
-		max-width: 600px;
-		margin: 0 auto;
-	} */
+	/* アコーディオン*/
 	
 	details {
 		border: none;
 		border-radius: 0;
 		margin-bottom: 0;
+		pointer-events: none;
 	}
 	
 	summary {
@@ -732,6 +674,68 @@ img.char-img {
 	details[open] summary {
 		background-color: initial;
 	} 
-	
 
+	
+  .container-detail {
+    display: flex;
+  }
+	
+  .logo-top {
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-top h1 {
+    top: 55%;
+    left: 50%;
+    font-size: 320%;
+    padding-left: 50%;
+  }
+
+  .top-photo {
+    width: 100%;
+  }
+
+
+
+  .hospital-photo {
+    display: flex;
+  }
+
+  .message {
+    padding: 0 60px 0 0;
+    text-align: left !important;
+  }
+
+	.message1 {
+		padding: 0 0 0 60px;
+	}
+
+	.message-right {
+		text-align: right;
+		padding: 0 0 20px 0;
+	}
+
+
+  .news {
+    text-align: center;
+		padding-top: 30px;
+  }
+
+	h4.border{
+		padding-top: 70px;
+	}
+
+	.message-title {
+		text-align: left;
+	}	
+
+	.message-title,
+	.message-right {
+		padding: 0 0 20px 0;
+	}
+
+	.message-content {
+		line-height: 30px;
+	}
 }

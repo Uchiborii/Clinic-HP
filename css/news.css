@@ -6,26 +6,10 @@ a {
   padding-top: 15px;
 }
 
-.list-item {
-  justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  align-items: center;
-}
-
-.list-item p {
-  font-size: 65%;
-}
-
 .button-img .button-icon {
   max-width: none;
   height: 15px;
 	padding-left: 10px;
-}
-
-.mt-4 {
-  text-align: center;
-  padding: 20px 0;
 }
 
 .pagination {
@@ -42,13 +26,19 @@ a {
 	font-size: 80%;
   margin-right: auto;
 	font-weight: bold;
+	display: flex;
+}
+
+.tag-font {
+	padding-left: 10px;
+	color: red;
 }
 
 	.blogs-container {
 		display: block;
 	}
 
-	.button-flex{
+	.button-flex {
 		display: flex;
 	}
 
@@ -56,23 +46,16 @@ a {
 	.blogs-container {
 		display: block;
 	}
-
-	.list-item p{
-		font-size: 116%;
-	}
-
-	.news-date {
-		font-size: 60%;
-	}
 	
 	.center-item {
 		margin-right: auto;
-		font-weight: bold;
+		font-size: 100%;
 	}
 
 	.button-img .button-icon {
-    display: none;
-  }
+		height: 20px;
+	}
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -80,37 +63,18 @@ a {
     padding-top: 40px;
   }
 
-  .list-item {
-		display: flex; 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-		align-items: center;
-  }
-
   .button-img .button-icon {
     display: none;
   }
+
+	.center-item {
+		font-size: 100%;
+	}
 
   .news-date {
     padding-right: 20px;
 		font-size: 70%;
   }
-
-  .news-flex {
-    display: flex;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .news-title {
-    padding-bottom: 10px;
-  }
-	
-	.list-item {
-		font-size: 100%;
-		text-align: left;
-	}
-
-
 
 	.blogs-container {
 		display: flex;  /* 子要素を横並びにする */
@@ -122,11 +86,4 @@ a {
 	.blog-item {
 		flex: 1 1 calc(30% - 20px);  /* 3つの記事を均等に表示 */
 	}
-	
-	.blog-item img {
-		max-width: 100%;
-		height: auto;
-	}
-	
-	
 }
