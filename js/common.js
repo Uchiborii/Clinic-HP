@@ -2,7 +2,7 @@ const baseUrl = `https://u-company.cdn.newt.so/v1/blog-547919/post`;
 const order = "&order=-dateTime";
 
 async function displayData() {
-  const { html } = await getPostData(3);
+  const html  = await getPostData(3);
   document.getElementById("result").innerHTML += html;
 }
 
@@ -89,5 +89,10 @@ async function getPostData(_limit) {
   let url = `${baseUrl}?limit=${Number(_limit)}${order}`;
   const data = await fetchData(url);
   const html = await display(data);
-  return { html };
+  return  html;
+}
+
+function toggleNav() {
+  var body = document.body;
+  body.classList.toggle("nav-open");
 }

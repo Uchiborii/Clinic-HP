@@ -10,19 +10,48 @@
 		<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/news.css" />
-    <script src="js/news.js"></script>
-    <script src="js/html.js"></script>
+    <script src="js/common.js"></script>
 		<title>TOP</title>
   </head>
   <body>
-    <div id="header"></div>
+    <header>
+	
+			<h1>
+				<a href="index.html">
+					<img src="img/logo.webp" alt="メディネットクリニック" class="hospital-logo" />
+				</a>
+			</h1>
+			
+			<nav class="nav">
+				<div class="menu">
+					<ul class="nav-list">
+						<li class="nav-item"><a href="#time">診療時間</a></li>
+						<li class="nav-item"><a href="#infomation">当院のご案内</a></li>
+						<li class="nav-item"><a href="#access">アクセス</a></li>
+					</ul>
+					<div class="header-position">
+								<div class="phone"><i class="bi bi-telephone-fill"></i>123-456-789</div>			
+								<div>休診日：水曜日・土曜午後・日祝</div>
+					</div>
+				</div>
+			</nav>
+			<div class="hamburger" id="js-hamburger" type="button" onclick="toggleNav()">
+				<span class="hamburger-border hamburger-border-top"></span>
+				<span class="hamburger-border hamburger-border-center"></span>
+				<span class="hamburger-border hamburger-border-bottom"></span>
+			</div>
+			<div class="black-bg" id="js-black-bg"></div>
+			</header>
+
+
 			<div class="header-top"></div>	
 			<div class="logo-top">
 				<img src="img/hospital.webp" alt="病院画像" class="top-photo" />
 			</div>
-				<main>
-
-
+				
+			
+			
+		<main>
       <section>
         <div class="container">
           <div class="news">
@@ -141,7 +170,7 @@
               <h4 class="sub-padding">駐車場<hr/></h4>
               <p class="p-margin">医院前に当院専用駐車場あり</p>
               <h4 class="sub-padding">備考<hr/></h4>
-              <p class="p-margin">長野駅から徒歩で役20分<br>
+              <p class="p-margin">長野駅から徒歩で約20分<br>
 								長野駅から車で約５分</p>
             </div>
             <div class="access">
@@ -151,10 +180,26 @@
           </div>
         </div>
       </section>
-
-
-      <div id="footer"></div>
     </main>
+
+		<footer>
+  <div class="footer">
+    <div class="container">			
+				<div class="grid">
+					<a href="index.html">
+						<img src="img/logo.webp" alt="病院ロゴ" class="hospital-logo" />
+					</a>
+	
+					<div class="footer-position">
+            <div class="phone"><i class="bi bi-telephone-fill"></i>123-456-789</div>			
+						<div class="footer-day">休診日：水曜日・土曜午後・日祝</div>
+					</div>
+				</div>
+      <p class="copyright">© 2024 メディネットクリニック</p>
+    </div>
+
+</footer>
+
   </body>
 	<script>
 		displayData();

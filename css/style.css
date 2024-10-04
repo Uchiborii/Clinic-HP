@@ -23,20 +23,19 @@ body {
   width: 100%;
   max-width: 100%;
 	height: auto;
+
 }
 
 .business-hour,
 .access {
-  flex: 1;
 }
 
-.gmap-iframe {
-  aspect-ratio: 10 / 7;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-
+.access {
+height: 200px;
 }
+
+
+
 
 .logo-top {
   width: 100%;
@@ -429,7 +428,6 @@ details[open] summary {
   h4 {
     font-size: 80%;
     font-weight: bold;
-    border-bottom: 1px dotted #ffffff;
     padding-top: 20px;
   }
   p {
