@@ -203,13 +203,13 @@ header {
   background-color: #333;
   transition: all 0.6s;
 }
-.hamburger-border-top {
+.hamburger-border:nth-child(1) {
   top: 14px;
 }
-.hamburger-border-center {
+.hamburger-border:nth-child(2) {
   top: 20px;
 }
-.hamburger-border-bottom {
+.hamburger-border:nth-child(3) {
   top: 26px;
 }
 .black-bg {
@@ -339,28 +339,6 @@ img.char-img {
 	padding: 20px;
   }
 
-
-
-details {
-	margin-bottom: 10px;
-}
-	
-summary {
-	display: block;
-	padding: 10px 15px;
-	cursor: pointer;
-	border-bottom: 1px solid #cecece;
-	color: #fff;
-	position: relative;
-}
-
-.accordion-content {
-	padding: 10px 15px;
-}
-
-details[open] summary {
-	color: #fff;
-}
 
 .header-position {
 	display: none;
@@ -528,7 +506,7 @@ details[open] summary {
 
 	.phone {
 		font-size: 180%;
-}
+	}
 
   .grid {
     display: flex;
@@ -580,7 +558,6 @@ details[open] summary {
     font-size: 100%;
   }
 
-
 	.access {
 		flex-basis:50%;
 		height: 510px;
@@ -596,37 +573,8 @@ details[open] summary {
 
 	.business-hour{
 		flex-basis:50%;
-padding: 0;
-	}
-
-
-	/* アコーディオン*/
-	
-	details {
-		border: none;
-		border-radius: 0;
-		margin-bottom: 0;
-		pointer-events: none;
-	}
-	
-	summary {
-		font-weight: normal;
 		padding: 0;
-		text-align: left;
-		cursor: pointer;
-		background-color: #ffffff;
 	}
-	
-	.accordion-content {
-		border-top: 0.5px solid #dfdede;
-		padding: 10px 0;
-	}
-	
-	details[open] summary {
-		background-color: initial;
-	} 
-
-
 	
   .logo-top {
     margin: 0;
@@ -644,10 +592,10 @@ padding: 0;
     width: 100%;
   }
 
-img.char-img{
-	width: 3800px;
-	height: auto;
-}
+	img.char-img{
+		width: 3800px;
+		height: auto;
+	}
 
 	img.doctor-img{
 		width: 3800px;
@@ -674,12 +622,10 @@ img.char-img{
     text-align: left !important;
   }
 
-
 	.message-right {
 		text-align: right;
 		padding: 0 0 20px 0;
 	}
-
 
   .title {
     text-align: center;

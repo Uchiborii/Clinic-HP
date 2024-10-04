@@ -8,8 +8,34 @@ a {
 
 .button-img .button-icon {
   max-width: none;
-  height: 15px;
-	padding-left: 10px;
+  height: 17px;
+	padding: 0 10px;
+}
+
+details {
+	margin-bottom: 10px;
+}
+
+details[open] .button-icon {
+	transform:rotate(180deg);  
+} 
+	
+summary {
+	display: block;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-bottom: 1px solid #cecece;
+	color: #fff;
+	position: relative;
+}
+
+
+.accordion-content {
+	padding: 10px 15px;
+}
+
+details[open] summary {
+	color: #fff;
 }
 
 .pagination {
@@ -86,4 +112,33 @@ a {
 	.blog-item {
 		flex: 1 1 calc(30% - 20px);  /* 3つの記事を均等に表示 */
 	}
+
+	
+	/* アコーディオン*/
+	
+	details {
+		border: none;
+		border-radius: 0;
+		margin-bottom: 0;
+		pointer-events: none;
+	}
+	
+	summary {
+		font-weight: normal;
+		padding: 0;
+		text-align: left;
+		cursor: pointer;
+		background-color: #ffffff;
+	}
+	
+	.accordion-content {
+		border-top: 0.5px solid #dfdede;
+		padding: 10px 0;
+	}
+	
+	details[open] summary {
+		background-color: initial;
+	} 
+
+
 }
