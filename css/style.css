@@ -95,7 +95,7 @@ h2 {
 	padding: 50px 0 10px 0;
 }
 h3 {
-	font-size: 70%;
+	font-size: 100%;
 }
 
 p {
@@ -336,6 +336,7 @@ img.char-img {
 
 .business-hour {
 	background-color: #f3f2f2;
+	padding: 20px;
   }
 
 
@@ -427,6 +428,10 @@ details[open] summary {
 	.business-hour{
 		padding: 40px;
 	}
+
+	.hospital-area{
+		margin-bottom: 60px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -449,10 +454,6 @@ details[open] summary {
   p {
     font-size: 85%;
   }
-
-	.sub-padding {
-		padding-top: 0;
-		}
 
   .hospital-logo {
     height: 60px;
@@ -536,7 +537,7 @@ details[open] summary {
   }
 
   hr {
-		width: 500px;
+		width: 380px;
   }
 
   .copyright {
@@ -586,15 +587,16 @@ details[open] summary {
 		}
 
 	.p-margin {
-		margin: 10px 0 35px 150px;
+		margin: 10px 0 35px 190px;
 		}
 		
 	.sub-padding{
-		padding: 40px 0 10px 150px;
+		padding: 40px 0 0 190px;
 	}
 
 	.business-hour{
 		flex-basis:50%;
+padding: 0;
 	}
 
 
@@ -656,6 +658,7 @@ img.char-img{
 	.doctor-area {
     display: flex;
   }
+
 
 	.doctor-area{
 		flex-direction: row-reverse;
