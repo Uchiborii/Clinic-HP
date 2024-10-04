@@ -577,7 +577,7 @@ details[open] summary {
   }
 
   .date {
-    font-size: 125%;
+    font-size: 100%;
   }
 
 
@@ -645,12 +645,12 @@ padding: 0;
   }
 
 img.char-img{
-	width: 3500px;
+	width: 3800px;
 	height: auto;
 }
 
 	img.doctor-img{
-		width: 3600px;
+		width: 3800px;
 		height: auto;
 	}
 
@@ -662,6 +662,7 @@ img.char-img{
 
 	.doctor-area{
 		flex-direction: row-reverse;
+		margin-top: 40px;
 	}
 
 	.message-top {
