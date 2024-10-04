@@ -19,22 +19,14 @@ body {
   /* margin-top: 30px; */
 }
 
-.container-detail {
-  width: 100%;
-  max-width: 100%;
-	height: auto;
-
-}
-
-.business-hour,
-.access {
-}
-
 .access {
 height: 200px;
 }
 
-
+.doctor-area{
+	flex-direction: row-reverse;
+	margin-top: 50px;
+}
 
 
 .logo-top {
@@ -70,12 +62,7 @@ height: 200px;
   display: block;
 }
 
-.news h2,
-.time h2 {
-  text-align: center;
-}
-
-.greeting {
+.title h2 {
   text-align: center;
 }
 
@@ -91,6 +78,8 @@ height: 200px;
 .message-right {
 font-size: 100%;
 padding: 10px;
+text-align: center;
+font-weight: bold;
 }
 
 html {
@@ -144,7 +133,8 @@ margin: 5px 20px 20px 20px;
 }
 
 .sub-padding{
-	margin: 10px 20px 0 20px;
+	padding: 10px 20px 0 20px;
+	font-weight: bold;
 }
 
 
@@ -315,7 +305,7 @@ table {
   width: 100%;
 }
 
-caption {
+.date {
   caption-side: bottom;
   padding: 10px;
   text-align: right;
@@ -335,20 +325,6 @@ img.char-img {
 	height: auto;
 }
 
-.hospital-photo {
-  display:flex;
-  flex-direction: column;
-}
-
-.message {
-    order:2;
-  }
-
-
-.change-img {
-    order: 1;
-  }
-
 .phone {
 	font-size: 150%;
 	letter-spacing: 7px;
@@ -358,21 +334,11 @@ img.char-img {
 	font-size: 70%;
 }
 
-.container-detail{
-  display:flex;
-  flex-direction: column;
-}
-
 .business-hour {
 	background-color: #f3f2f2;
-	margin-bottom: 0;
-	order:2;
-	margin-top: -6px;
   }
 
-.access {
-    order: 1;
-  }
+
 
 details {
 	margin-bottom: 10px;
@@ -380,7 +346,6 @@ details {
 	
 summary {
 	display: block;
-	font-weight: bold;
 	padding: 10px 15px;
 	cursor: pointer;
 	border-bottom: 1px solid #cecece;
@@ -435,11 +400,11 @@ details[open] summary {
     padding-top: 5px;
   }
 	.sub-padding{
-		margin: 0 0 0 160px;
+		padding: 10px 0 0 130px;
 		font-size: 100%;
 	}
 	.p-margin {
-		margin: 10px 0 30px 160px;
+		margin: 10px 0 30px 130px;
 		}
 
 	th,
@@ -447,12 +412,20 @@ details[open] summary {
 		font-size: 90%;
 	}
 
-	caption {
+	.date {
 		font-size: 90%;
 	}
 
 	hr {
 		width: 300px;
+	}
+
+	.access {
+		height: 320px;
+		}
+
+	.business-hour{
+		padding: 40px;
 	}
 }
 
@@ -602,48 +575,26 @@ details[open] summary {
     letter-spacing: 1px;
   }
 
-  caption {
+  .date {
     font-size: 125%;
   }
 
-		
-	img.doctor-img {
-		max-width: 100%;
-		width: 3500px;
-		height: auto;
-		padding-bottom: 50px;
-		padding-top: 0;
-	}
 
-	img.char-img {
-		max-width: 100%;
-		width: 3650px;
-		height: auto;
-		padding-bottom: 50px;
-	}
-
-	.hospital-photo,
-	.container-detail {
-		flex-direction: row;
-	}
-
-	.message,
-	.business-hour {
-		margin: 0;
-		order: 0; 
-	}
-
-	.change-img,
 	.access {
-		order: 0;
-	}
+		flex-basis:50%;
+		height: 510px;
+		}
 
 	.p-margin {
-		margin: 10px 0 35px 100px;
+		margin: 10px 0 35px 150px;
 		}
 		
 	.sub-padding{
-		margin: 40px 0 10px 95px;
+		padding: 40px 0 10px 150px;
+	}
+
+	.business-hour{
+		flex-basis:50%;
 	}
 
 
@@ -673,10 +624,7 @@ details[open] summary {
 		background-color: initial;
 	} 
 
-	
-  .container-detail {
-    display: flex;
-  }
+
 	
   .logo-top {
     margin: 0;
@@ -694,20 +642,34 @@ details[open] summary {
     width: 100%;
   }
 
+img.char-img{
+	width: 3500px;
+	height: auto;
+}
 
+	img.doctor-img{
+		width: 3600px;
+		height: auto;
+	}
 
-  .hospital-photo {
+  .hospital-area,
+	.doctor-area {
     display: flex;
   }
 
-  .message {
-    padding: 0 60px 0 0;
+	.doctor-area{
+		flex-direction: row-reverse;
+	}
+
+	.message-top {
+		padding: 0 60px 0 60px;
+	}
+
+  .message-bottom {
+    padding: 0 60px 0 60px;
     text-align: left !important;
   }
 
-	.message1 {
-		padding: 0 0 0 60px;
-	}
 
 	.message-right {
 		text-align: right;
@@ -715,9 +677,9 @@ details[open] summary {
 	}
 
 
-  .news {
+  .title {
     text-align: center;
-		padding-top: 30px;
+		padding-top: 50px;
   }
 
 	h4.border{
@@ -735,5 +697,10 @@ details[open] summary {
 
 	.message-content {
 		line-height: 30px;
+	}
+
+	.container-detail {
+		display: flex;
+		flex-direction: row-reverse;
 	}
 }
