@@ -32,14 +32,15 @@ async function fetchData(url) {
 				console.log("404エラー：お知らせが取得できませんでした。")
         return;
       } else{ 
-			window.location.href = "index.html";
+				document.getElementById("result").textContent = "メンテナンス中...";
+				console.log("エラー：404以外のエラーです。")
 			return;
 		}
 	}
 	return data;  // 正常にデータが取得できた場合の処理
 } catch (error) {
-	console.error("エラー:", error);
-	window.location.href = "index.html";  // 予期しないエラーの場合もindex.htmlに遷移
+	document.getElementById("result").textContent = "メンテナンス中...";
+	console.log("エラー：以下のエラーです。", error)
 }
 }
 
