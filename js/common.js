@@ -28,19 +28,19 @@ async function fetchData(url) {
 
     if (!response.ok) {
       if (response.status === 404) {
-        window.location.href = "index.html";
+        document.getElementById("result").textContent = "メンテナンス中...";
+				console.log("404エラー：お知らせが取得できませんでした。")
         return;
-      } else {
-        const errorLog = data.message;
-        let url = `error.html?message=${errorLog}`;
-        window.location.href = url;
-        return false;
-      }
-    }
-    return data;
-  } catch (error) {
-    console.error("エラー:", error);
-  }
+      } else{ 
+			window.location.href = "index.html";
+			return;
+		}
+	}
+	return data;  // 正常にデータが取得できた場合の処理
+} catch (error) {
+	console.error("エラー:", error);
+	window.location.href = "index.html";  // 予期しないエラーの場合もindex.htmlに遷移
+}
 }
 
 function display(data) {
