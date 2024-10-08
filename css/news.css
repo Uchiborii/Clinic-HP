@@ -23,7 +23,6 @@ details[open] .button-icon {
 summary {
 	display: block;
 	padding: 10px 15px;
-	/* cursor: pointer; */
 	border-bottom: 1px solid #cecece;
 	color: #fff;
 	position: relative;
@@ -127,7 +126,6 @@ details[open] summary {
 		font-weight: normal;
 		padding: 0;
 		text-align: left;
-		cursor: pointer;
 		background-color: #ffffff;
 	}
 	
