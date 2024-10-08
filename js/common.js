@@ -109,9 +109,6 @@ function toggleAccordion() {
 	}
 }
 
-// ウィンドウサイズが変更された時に実行(はじめは閉じた状態)
-// window.addEventListener('resize', toggleAccordion);
-
 //navバー
 document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('.nav');
