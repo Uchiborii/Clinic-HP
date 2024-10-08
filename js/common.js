@@ -93,7 +93,58 @@ async function getPostData(_limit) {
   return  html;
 }
 
-function toggleNav() {
-  var body = document.body;
-  body.classList.toggle("nav-open");
+
+
+function toggleAccordion() {
+	const detailsElements = document.querySelectorAll('details');
+
+	if (window.innerWidth >= 1200) {
+			detailsElements.forEach(detail => {
+					detail.setAttribute('open', 'open');
+			});
+	} else {
+			detailsElements.forEach(detail => {
+					detail.removeAttribute('open');
+			});
+	}
 }
+
+// ウィンドウサイズが変更された時に実行(はじめは閉じた状態)
+window.addEventListener('resize', toggleAccordion);
+
+//navバー
+document.addEventListener('DOMContentLoaded', function() {
+  const nav = document.querySelector('.nav');
+  
+  function toggleNav() {
+    const blackBg = document.querySelector('.black-bg');
+    const body = document.body;
+    
+    nav.classList.toggle('nav-open');
+    blackBg.classList.toggle('nav-open');
+    body.classList.toggle('nav-open');
+
+    const navItems = document.querySelectorAll('.nav-item a');
+    if (nav.classList.contains('nav-open')) {
+      navItems.forEach(item => {
+        item.addEventListener('click', closeNav);
+      });
+    } else {
+      navItems.forEach(item => {
+        item.removeEventListener('click', closeNav);
+      });
+    }
+  }
+  
+  function closeNav() {
+    const blackBg = document.querySelector('.black-bg');
+    const body = document.body;
+
+    nav.classList.remove('nav-open');
+    blackBg.classList.remove('nav-open');
+    body.classList.remove('nav-open');
+  }
+
+  // グローバルに関数を公開
+  window.toggleNav = toggleNav;
+});
