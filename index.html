@@ -201,12 +201,5 @@
 		displayData();
 		toggleAccordion();
 
-		document.querySelectorAll('details').forEach((detail) => {
-    detail.addEventListener('click', (e) => {
-        e.stopPropagation(); // クリックイベントがバブリングしないようにする
-        detail.open = !detail.open; // 開閉を手動で制御
-    });
-});
-
 	</script>
 </html>
