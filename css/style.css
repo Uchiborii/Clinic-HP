@@ -126,16 +126,15 @@ a:hover {
   color: #5B5656;
 }
 
-
-.p-margin {
-margin: 5px 20px 20px 20px;
-}
-
 .sub-padding{
-	padding: 10px 20px 0 20px;
+	padding: 10px 0 3px 0;
 	font-weight: bold;
+	border-bottom: solid 0.1px #b1b1b1;
 }
 
+h3.sub-padding:first-child{
+	padding: 0;
+}
 
 header {
   display: flex;
@@ -377,13 +376,6 @@ img.char-img {
     font-size: 75%;
     padding-top: 5px;
   }
-	.sub-padding{
-		padding: 10px 0 0 130px;
-		font-size: 100%;
-	}
-	.p-margin {
-		margin: 10px 0 30px 130px;
-		}
 
 	th,
 	td {
@@ -408,6 +400,10 @@ img.char-img {
 
 	.hospital-area{
 		margin-bottom: 60px;
+	}
+
+	.sub-padding{
+		font-size: 100%;
 	}
 }
 
@@ -563,16 +559,29 @@ img.char-img {
 		}
 
 	.p-margin {
-		margin: 10px 0 35px 190px;
-		}
-		
-	.sub-padding{
-		padding: 40px 0 0 190px;
+		margin: 10px 0 30px 0;
 	}
 
+	.p-margin:last-child{
+		margin: 0;
+	}
+	
+	.sub-padding{
+		padding: 5px 0 5px 0;
+	}
+	
 	.business-hour{
 		flex-basis:50%;
 		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.business-hour-inner{
+		max-width: 450px;
+		width: 100%;
+		
 	}
 	
   .logo-top {

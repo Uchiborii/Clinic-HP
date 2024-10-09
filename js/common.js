@@ -94,21 +94,6 @@ async function getPostData(_limit) {
 }
 
 
-
-function toggleAccordion() {
-	const detailsElements = document.querySelectorAll('details');
-
-	if (window.innerWidth >= 1200) {
-			detailsElements.forEach(detail => {
-					detail.setAttribute('open', 'open');
-			});
-	} else {
-			detailsElements.forEach(detail => {
-					detail.removeAttribute('open');
-			});
-	}
-}
-
 //navバー
 document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('.nav');
@@ -145,3 +130,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // グローバルに関数を公開
   window.toggleNav = toggleNav;
 });
+
