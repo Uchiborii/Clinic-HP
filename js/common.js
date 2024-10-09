@@ -2,8 +2,9 @@ const baseUrl = `https://u-company.cdn.newt.so/v1/blog-547919/post`;
 const order = "&order=-dateTime";
 
 async function displayData() {
-  const html  = await getPostData(3);
+  const html = await getPostData(3);
   document.getElementById("result").innerHTML += html;
+  accordion();
 }
 
 function customFormat(date) {
@@ -29,19 +30,19 @@ async function fetchData(url) {
     if (!response.ok) {
       if (response.status === 404) {
         document.getElementById("result").textContent = "メンテナンス中...";
-				console.log("404エラー：お知らせが取得できませんでした。")
+        console.log("404エラー：お知らせが取得できませんでした。");
         return;
-      } else{ 
-				document.getElementById("result").textContent = "メンテナンス中...";
-				console.log("エラー：404以外のエラーです。")
-			return;
-		}
-	}
-	return data;  // 正常にデータが取得できた場合の処理
-} catch (error) {
-	document.getElementById("result").textContent = "メンテナンス中...";
-	console.log("エラー：以下のエラーです。", error)
-}
+      } else {
+        document.getElementById("result").textContent = "メンテナンス中...";
+        console.log("エラー：404以外のエラーです。");
+        return;
+      }
+    }
+    return data; // 正常にデータが取得できた場合の処理
+  } catch (error) {
+    document.getElementById("result").textContent = "メンテナンス中...";
+    console.log("エラー：以下のエラーです。", error);
+  }
 }
 
 function display(data) {
@@ -57,77 +58,89 @@ function display(data) {
 
     const content = `
 			<div class="blog-item">
-				<details>
-					<summary>
-						<div class="news-date">
-								${formattedDate}
-						</div>
-						<div class="button-flex">
-							<div class="center-item">
-									${blog.title} 
-									${newTag}
-							</div>
-							<div class="button-img">					
-								<img src="img/button.webp" class="button-icon" />						
-							</div>
-						</div>
-					</summary>
-
-					<div class="accordion-content">
-						${blog.content}
+				<summary  class="accordion-summary">
+					<div class="news-date">
+							${formattedDate}
 					</div>
-				</details>
+					<div class="button-flex">
+						<div class="center-item">
+								${blog.title} 
+								${newTag}
+						</div>
+						<div class="button-img">					
+							<img src="img/button.webp" class="button-icon" />						
+						</div>
+					</div>
+					<div class="accordion-content">
+					${blog.content}
+					</div>
+				</summary>
 			</div>
 			`;
-    
-    html += content; 
+
+    html += content;
   });
   html += `</div>`;
   return html;
+}
+
+function accordion() {
+  let title_array = document.querySelectorAll(".accordion-summary");
+  title_array.forEach((title) => {
+    title.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      // アコーディオンコンテンツの表示・非表示をトグル
+      const content = this.closest('.blog-item').querySelector('.accordion-content');
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
 }
 
 async function getPostData(_limit) {
   let url = `${baseUrl}?limit=${Number(_limit)}${order}`;
   const data = await fetchData(url);
   const html = await display(data);
-  return  html;
+  return html;
 }
 
-
 //navバー
-document.addEventListener('DOMContentLoaded', function() {
-  const nav = document.querySelector('.nav');
-  
-  function toggleNav() {
-    const blackBg = document.querySelector('.black-bg');
-    const body = document.body;
-    
-    nav.classList.toggle('nav-open');
-    blackBg.classList.toggle('nav-open');
-    body.classList.toggle('nav-open');
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector(".nav");
 
-    const navItems = document.querySelectorAll('.nav-item a');
-    if (nav.classList.contains('nav-open')) {
-      navItems.forEach(item => {
-        item.addEventListener('click', closeNav);
+  function toggleNav() {
+    const blackBg = document.querySelector(".black-bg");
+    const body = document.body;
+
+    nav.classList.toggle("nav-open");
+    blackBg.classList.toggle("nav-open");
+    body.classList.toggle("nav-open");
+
+    const navItems = document.querySelectorAll(".nav-item a");
+    if (nav.classList.contains("nav-open")) {
+      navItems.forEach((item) => {
+        item.addEventListener("click", closeNav);
       });
     } else {
-      navItems.forEach(item => {
-        item.removeEventListener('click', closeNav);
+      navItems.forEach((item) => {
+        item.removeEventListener("click", closeNav);
       });
     }
   }
-  
+
   function closeNav() {
-    const blackBg = document.querySelector('.black-bg');
+    const blackBg = document.querySelector(".black-bg");
     const body = document.body;
 
-    nav.classList.remove('nav-open');
-    blackBg.classList.remove('nav-open');
-    body.classList.remove('nav-open');
+    nav.classList.remove("nav-open");
+    blackBg.classList.remove("nav-open");
+    body.classList.remove("nav-open");
   }
 
   // グローバルに関数を公開
   window.toggleNav = toggleNav;
 });
-

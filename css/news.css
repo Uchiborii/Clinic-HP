@@ -12,35 +12,6 @@ a {
 	padding: 0 10px;
 }
 
-details {
-	margin-bottom: 10px;
-}
-
-details[open] .button-icon {
-	transform:rotate(180deg);  
-} 
-	
-summary {
-	display: block;
-	padding: 10px 15px;
-	border-bottom: 1px solid #cecece;
-	color: #fff;
-}
-
-
-.accordion-content {
-	padding: 10px 15px;
-}
-
-details[open] summary {
-	color: #fff;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-
 .news-date {
   padding-right: 10px;
 	font-size: 60%;
@@ -58,12 +29,18 @@ details[open] summary {
 	color: red;
 }
 
-	.blogs-container {
-		display: block;
-	}
-
 	.button-flex {
 		display: flex;
+		border-bottom: solid 1px #cacaca;
+		margin-bottom: 10px;
+	}
+
+	.accordion-content {
+		display: none;
+	}
+	
+	.center-item.active ~ .accordion-content {
+		display: block;
 	}
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -80,6 +57,9 @@ details[open] summary {
 		height: 20px;
 	}
 
+	.button-flex {
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -98,6 +78,7 @@ details[open] summary {
   .news-date {
     padding-right: 20px;
 		font-size: 70%;
+		text-align: left;
   }
 
 	.blogs-container {
@@ -111,31 +92,11 @@ details[open] summary {
 		flex: 1 1 calc(30% - 20px);  /* 3つの記事を均等に表示 */
 	}
 
-	
-	/* アコーディオン*/
-	
-	details {
-		border: none;
-		border-radius: 0;
-		margin-bottom: 0;
+  .accordion-content {
+    display: block;
+  }
+
+	.accordion-summary {
 		pointer-events: none;
 	}
-	
-	summary {
-		font-weight: normal;
-		padding: 0;
-		text-align: left;
-		background-color: #ffffff;
-	}
-	
-	.accordion-content {
-		border-top: 0.5px solid #dfdede;
-		padding: 10px 0;
-	}
-	
-	details[open] summary {
-		background-color: initial;
-	} 
-
-
 }
