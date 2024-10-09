@@ -39,10 +39,6 @@ a {
 		display: none;
 	}
 	
-	.center-item.active ~ .accordion-content {
-		display: block;
-	}
-
 @media screen and (min-width: 700px) and (max-width: 1200px) {
 	.blogs-container {
 		display: block;
