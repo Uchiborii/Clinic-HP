@@ -24,20 +24,33 @@ a {
 	display: flex;
 }
 
+.button-icon {
+  transition: transform 0.3s ease; /* スムーズな回転アニメーション */
+}
+
+.button-icon.rotated {
+  transform: rotate(180deg);
+}
+
+
 .tag-font {
 	padding-left: 10px;
 	color: red;
 }
 
-	.button-flex {
-		display: flex;
-		border-bottom: solid 1px #cacaca;
-		margin-bottom: 10px;
-	}
+.button-flex {
+	display: flex;
+	border-bottom: solid 1px #cacaca;
+	margin-bottom: 10px;
+}
 
-	.accordion-content {
-		display: none;
-	}
+.accordion-content {
+	display: none;
+}
+
+.accordion-content p:last-child{
+		padding-bottom: 60px;
+}
 	
 @media screen and (min-width: 700px) and (max-width: 1200px) {
 	.blogs-container {
@@ -95,4 +108,9 @@ a {
 	.accordion-summary {
 		pointer-events: none;
 	}
+
+	.accordion-content p:last-child{
+		padding-bottom: 0;
+}
+
 }

@@ -90,6 +90,11 @@ function accordion() {
     title.addEventListener("click", function () {
       this.classList.toggle("active");
 
+			const icon = this.querySelector('.button-icon');
+			if (icon) {
+        icon.classList.toggle('rotated');
+      }
+
       // アコーディオンコンテンツの表示・非表示をトグル
       const content = this.closest('.blog-item').querySelector('.accordion-content');
       if (content.style.display === "block") {
@@ -100,6 +105,7 @@ function accordion() {
     });
   });
 }
+
 
 async function getPostData(_limit) {
   let url = `${baseUrl}?limit=${Number(_limit)}${order}`;
